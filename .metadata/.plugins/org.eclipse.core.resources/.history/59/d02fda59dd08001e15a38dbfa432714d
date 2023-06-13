@@ -1,0 +1,77 @@
+package com.Employee.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Employee.modal.Employee;
+import com.Employee.service.EmployeeService;
+
+
+@RestController
+public class EmployeeController {
+	
+
+	
+	@Autowired
+	EmployeeService employeeService;
+
+    @PostMapping ("save/employee")
+    public List<Employee> saveAllStaff(@RequestBody List<Employee>  employee )
+    {
+        return employeeService.saveAllEmployee(employee);
+    }
+    
+    
+    @GetMapping ("employee1")
+    public List<Employee> getEmployeeList1()
+    {
+        return employeeService.getAllEmployeeInIndia();
+    }
+    
+    
+    @GetMapping ("employee2")
+    public List<Employee> getEmployeeList2()
+    {
+        return employeeService.getAllEmployeeChennaiOrHyderabad();
+    }
+
+    
+    
+    @GetMapping ("employee3")
+    public List<Employee> getEmployeeList3()
+    {
+        return employeeService.getAllEmployeewhoHaveBenefits();
+    }
+    
+    @GetMapping ("employee4")
+    public List<String> getEmployeeList4()
+    {
+        return employeeService.getAllEmployeeDetails();
+    }
+    
+    @GetMapping ("employee5")
+    public List<Employee> getEmployeeList5()
+    {
+        return employeeService.getAllEmployeeInChennaiAndIndia();
+    }
+ 
+    @GetMapping ("employee6/{id}")
+    public List<Employee> getAllEmployee(@PathVariable int id)
+    {
+        return employeeService.getOneEmployee(id);
+    }
+    
+    @DeleteMapping ("employee7/{id}")
+    public void deleteEmployeeById(@PathVariable int id)
+    {
+         employeeService.deleteOneEmployee(id);
+    }
+
+}

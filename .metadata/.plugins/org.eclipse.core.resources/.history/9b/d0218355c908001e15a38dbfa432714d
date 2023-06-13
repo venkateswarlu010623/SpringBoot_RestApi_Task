@@ -1,0 +1,51 @@
+package com.Employee.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Employee.service.EmployeeService;
+
+
+@RestController
+public class EmployeeController {
+	
+
+	
+	@Autowired
+	EmployeeService staffService;
+
+    @PostMapping ("save/staff")
+    public List<Employee> saveAllStaff(@RequestBody List<Employee>  staff )
+    {
+        return staffService.saveAllEmployee(staff);
+    }
+    
+    
+    @GetMapping ("staff1")
+    public List<Staff> getStaffList1()
+    {
+        return staffService.getStaffWhoTeachYear1();
+    }
+    
+    
+    @GetMapping ("staff2")
+    public List<Staff> getStaffList2()
+    {
+        return staffService.getStaffWhoPresentTodayAndTeachSubject1();
+    }
+    
+    
+    @GetMapping ("staff3")
+    public List<Staff> getStaffList3()
+    {
+        return staffService.getStaffWhoTeachesMoreThanTwoSubjectsInYear2();
+    }
+
+
+
+}

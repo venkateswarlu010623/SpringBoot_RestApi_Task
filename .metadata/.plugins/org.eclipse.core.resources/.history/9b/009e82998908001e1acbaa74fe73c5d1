@@ -1,0 +1,18 @@
+
+
+import java.util.List;
+
+import com.Employee.modal.Benefits;
+import com.Employee.modal.Department;
+
+
+public class Employee {
+
+	int employeeId;
+	String employeeName;
+	int Salary;
+	Location locationId;
+	Department deptId;
+	List<Benefits>benefitId;
+	
+}

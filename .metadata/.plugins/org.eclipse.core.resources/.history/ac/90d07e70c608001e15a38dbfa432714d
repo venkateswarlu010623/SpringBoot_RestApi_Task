@@ -1,0 +1,85 @@
+package com.Employee.modal;
+
+
+import java.util.List;
+
+
+public class Employee {
+
+	int employeeId;
+	String employeeName;
+	int Salary;
+	Location locationId;
+	Department deptId;
+	List<Benefits>benefitId;
+	
+	public Employee() {
+		super();
+	}
+
+	public Employee(int employeeId, String employeeName, int salary, Location locationId, Department deptId,
+			List<Benefits> benefitId) {
+		super();
+		this.employeeId = employeeId;
+		this.employeeName = employeeName;
+		Salary = salary;
+		this.locationId = locationId;
+		this.deptId = deptId;
+		this.benefitId = benefitId;
+	}
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+	public int getSalary() {
+		return Salary;
+	}
+
+	public void setSalary(int salary) {
+		Salary = salary;
+	}
+
+	public Location getLocationId() {
+		return locationId;
+	}
+
+	public void setLocationId(Location locationId) {
+		this.locationId = locationId;
+	}
+
+	public Department getDeptId() {
+		return deptId;
+	}
+
+	public void setDeptId(Department deptId) {
+		this.deptId = deptId;
+	}
+
+	public List<Benefits> getBenefitId() {
+		return benefitId;
+	}
+
+	public void setBenefitId(List<Benefits> benefitId) {
+		this.benefitId = benefitId;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", Salary=" + Salary
+				+ ", locationId=" + locationId + ", deptId=" + deptId + ", benefitId=" + benefitId + "]";
+	}
+	
+}

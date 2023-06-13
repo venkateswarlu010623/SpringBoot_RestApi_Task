@@ -1,0 +1,42 @@
+package com.StudentAndStaff.service;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.StudentAndStaff.modal.Student;
+
+@Service
+public class StudentService {
+	
+	List<Student> student1 = new LinkedList();
+
+    public List<Student> save(List<Student>  student)
+    {
+    	student1.addAll(student);
+        return student1;
+    }
+
+//    1) Retrieve Student details in year 1 
+    public List<Student> getStudentsOfYear1()
+    {
+    	student1.stream().filter(s->s.getCurrentYear().equals("year 1"))
+		.forEach(f->System.out.println("Student id ="+f.studentId+" "+
+										"Student name ="+f.studentName+" "+
+										"current year="+f.currentYear));
+
+        return null;
+    }
+
+    public List<Student> getStudentsOfYear1WhoPresentTodayInCSEBranch()
+    {
+        return null;
+    }
+
+    public List<Student> getStudentsWhoAreNotPassesdInYear1()
+    {
+        return null;
+    }
+
+}

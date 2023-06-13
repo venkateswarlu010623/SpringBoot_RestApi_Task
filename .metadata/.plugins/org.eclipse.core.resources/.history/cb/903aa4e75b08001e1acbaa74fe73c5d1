@@ -1,0 +1,33 @@
+package com.StudentAndStaff.Modal;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+public class Subjects {
+    int subjectId;
+    String subjectName;
+    String subjectyear;
+    String branch;
+
+    public Subjects() {
+    }
+
+    @Override
+    public String toString() {
+        return "Subjects{" +
+                "subjectId=" + subjectId +
+                ", subjectName='" + subjectName + '\'' +
+                ", subjectyear='" + subjectyear + '\'' +
+                ", branch='" + branch + '\'' +
+                '}';
+    }
+
+    public Subjects(int subjectId, String subjectName, String subjectyear, String branch) {
+        this.subjectId = subjectId;
+        this.subjectName = subjectName;
+        this.subjectyear = subjectyear;
+        this.branch = branch;
+    }
+}
+
+

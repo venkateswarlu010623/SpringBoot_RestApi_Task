@@ -1,0 +1,19 @@
+package com.Employee.modal;
+
+
+import java.util.List;
+
+
+public class Employee {
+
+	int employeeId;
+	String employeeName;
+	int salary;
+	Location location;
+	Department department;
+	List<Benefits>benefitId;
+	
+	public Employee() {
+		super();
+	}
+}

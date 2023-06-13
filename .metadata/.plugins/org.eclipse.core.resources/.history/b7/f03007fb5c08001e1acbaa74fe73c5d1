@@ -1,0 +1,44 @@
+package com.StudentAndStaff.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.StudentAndStaff.modal.Student;
+
+@Service
+public class StudentService {
+
+    Student st1 = new Student();
+
+    public Student save(Student student)
+    {
+        Student st = new Student();
+        st.setStudentId(student.studentId());
+        st.setStudentName(student.studentName());
+        st.setStudentEmail(student.studentEmail());
+        st.setStudentbranch(student.studentbranch());
+        st.setStudentJoinDate(student.studentJoinDate());
+        st.setCurrentYear(student.currentYear());
+        st.setStudentYearlyAttendance(student.studentYearlyAttendance());
+        st.setYearWiseStudentSubjectsAndMarksAndResult(student.yearWiseStudentSubjectsAndMarksAndResult());
+
+        return st;
+    }
+
+    public List<Student> getStudentsOfYear1()
+    {
+        return null;
+    }
+
+    public List<Student> getStudentsOfYear1WhoPresentTodayInCSEBranch()
+    {
+        return null;
+    }
+
+    public List<Student> getStudentsWhoAreNotPassesdInYear1()
+    {
+        return null;
+    }
+
+}

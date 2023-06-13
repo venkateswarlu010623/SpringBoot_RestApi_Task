@@ -1,0 +1,62 @@
+package com.Employee.service;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import com.Employee.modal.Employee;
+
+public class EmployeeService {
+	
+	List<Employee> employee1 = new LinkedList<>();
+	
+	
+	public List<Employee> saveAllEmployee(List<Employee> employee)
+	{
+		 employee1.addAll(employee);
+		
+		return employee1;
+	}
+	
+	//1.Retrieve all employees in India
+	
+	public List<Employee> getAllEmployeeInIndia()
+	{
+		return null;
+		
+	}
+	
+	//2.Retrieve employees who are in Chennai or Hyderabad
+
+	public List<Employee> getAllEmployeeChennaiOrHyderabad()
+	{
+		return null;
+		
+	}
+	
+	
+	//3. Retrieve employees who have Benefits and display benefits details
+
+		public List<Employee> getAllEmployeewhoHaveBenefits()
+		{
+			return null;
+			
+		}
+		
+	//4.Retrieve employee details -  employeeId, employeeName, Salary, deptName, locationName, locationCountry
+			
+		public List<Employee> getAllEmployeeDetails()
+		{
+			return null;
+			
+		}
+		
+	//5.Retrieve employees who are in Chennai and India
+		
+		public List<Employee> getAllEmployeeInChennaiAndIndia()
+		{
+			return null;
+			
+		}
+
+
+}

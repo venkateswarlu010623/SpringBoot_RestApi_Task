@@ -1,0 +1,67 @@
+package com.Employee.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Employee.modal.Employee;
+import com.Employee.service.EmployeeService;
+
+
+@RestController
+public class EmployeeController {
+	
+	@Autowired
+	EmployeeService employeeService;
+
+    @PostMapping ("/createStaffMembers")
+    public List<Employee> saveAllStaff(@RequestBody List<Employee>  employee )
+    {
+        return employeeService.saveAllEmployee(employee);
+    }
+    
+    
+    @GetMapping("/getEmployeesInCountry/{country}")
+    public List<Employee> getEmployeeListByCountry(@PathVariable String country)
+    {
+        return employeeService.getAllEmployeeInIndia(country);
+    }
+
+    
+    
+    @GetMapping("/employees/{city1}-{city2}")
+    public List<Employee> getEmployeesByCities(@PathVariable String city1, @PathVariable String city2) {
+        return employeeService.getAllEmployeesByCities(city1, city2);
+    }
+
+    @GetMapping("/employees/benefits")
+    public List<Employee> getEmployeesWithBenefits() {
+        return employeeService.getAllEmployeesWithBenefits();
+    }
+
+    @GetMapping("/employees/details")
+    public List<String> getEmployeeDetails() {
+        return employeeService.getAllEmployeeDetails();
+    }
+
+    @GetMapping("/employees/{country}/{city}")
+    public List<Employee> getEmployeesByCountryAndCity(@PathVariable String city, @PathVariable String country) {
+        return employeeService.getAllEmployeesInCityAndCountry(city, country);
+    }
+
+    @GetMapping("/employees/{id}")
+    public List<Employee> getEmployeeById(@PathVariable int id) {
+        return employeeService.getOneEmployeeById(id);
+    }
+
+    @DeleteMapping("/employees/{id}")
+    public void deleteEmployeeById(@PathVariable int id) {
+        employeeService.getOneEmployeeById(id);
+    }
+}

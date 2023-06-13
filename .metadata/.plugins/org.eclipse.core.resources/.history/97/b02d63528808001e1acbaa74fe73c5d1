@@ -1,0 +1,14 @@
+
+public class Location2 {
+
+	int locationId;
+	String locationName;
+	String locationCountry;
+	
+}
+
+//Location
+//--------
+//locationId
+//locationName (Hyderabad, chennai, London)
+//locationCountry (India, United Kingdom)

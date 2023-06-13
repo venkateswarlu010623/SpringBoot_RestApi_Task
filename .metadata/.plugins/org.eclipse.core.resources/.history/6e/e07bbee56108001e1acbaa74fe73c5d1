@@ -1,0 +1,35 @@
+package com.StudentAndStaff.service;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.StudentAndStaff.modal.Student;
+
+@Service
+public class StudentService {
+	
+    public List<Student> save(List<Student>  student)
+    {
+    	List<Student> student1 = new LinkedList(student);
+    	student1.addAll(student);
+        return student1;
+    }
+
+    public List<Student> getStudentsOfYear1()
+    {
+        return null;
+    }
+
+    public List<Student> getStudentsOfYear1WhoPresentTodayInCSEBranch()
+    {
+        return null;
+    }
+
+    public List<Student> getStudentsWhoAreNotPassesdInYear1()
+    {
+        return null;
+    }
+
+}

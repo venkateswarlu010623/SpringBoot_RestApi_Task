@@ -1,0 +1,16 @@
+package com.StudentAndStaff.modal;
+
+import java.time.LocalDate;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class StudentAttendance {
+	
+    LocalDate studentAttendanceDate;
+    String studentAttendanceStatus;
+
+    public StudentAttendance() {
+    }
+    }

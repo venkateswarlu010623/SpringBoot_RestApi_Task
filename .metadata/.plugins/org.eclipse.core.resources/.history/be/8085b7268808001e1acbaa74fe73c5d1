@@ -1,0 +1,13 @@
+package com.Employee.Modal;
+
+public class Department {
+	
+	int departmentId;
+	String departmentName;
+}
+
+//Department
+//----------
+//deptId
+//deptName (healthcare, finance, admin, fraud)
+

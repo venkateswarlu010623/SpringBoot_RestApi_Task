@@ -1,0 +1,124 @@
+
+package com.StudentAndStaff.Modal;
+
+
+import java.time.LocalDate;
+import java.util.List;
+
+
+public class Staff {
+
+    String staffId;
+    String staffName;
+    String staffEmail;
+    Boolean isTeaching;
+    LocalDate staffJoinDate;
+    List<String> teachingYearsOrWorkingYears;
+    List<StaffAttendance> StaffAttendanceAndDetails;
+    List<Subjects> teachingsubjects;
+    List<String> teachingOrWorkingBranches;
+
+
+    public Staff() {
+    }
+
+    public Staff(String staffId, String staffName, String staffEmail, Boolean isTeaching, LocalDate staffJoinDate, List<String> teachingYearsOrWorkingYears, List<StaffAttendance> staffAttendanceAndDetails, List<Subjects> teachingsubjects, List<String> teachingOrWorkingBranches) {
+        this.staffId = staffId;
+        this.staffName = staffName;
+        this.staffEmail = staffEmail;
+        this.isTeaching = isTeaching;
+        this.staffJoinDate = staffJoinDate;
+        this.teachingYearsOrWorkingYears = teachingYearsOrWorkingYears;
+        StaffAttendanceAndDetails = staffAttendanceAndDetails;
+        this.teachingsubjects = teachingsubjects;
+        this.teachingOrWorkingBranches = teachingOrWorkingBranches;
+    }
+
+
+    public String staffId() {
+        return staffId;
+    }
+
+    public void setStaffId(String staffId) {
+        this.staffId = staffId;
+    }
+
+    public String staffName() {
+        return staffName;
+    }
+
+    public void setStaffName(String staffName) {
+        this.staffName = staffName;
+    }
+
+    public String staffEmail() {
+        return staffEmail;
+    }
+
+    public void setStaffEmail(String staffEmail) {
+        this.staffEmail = staffEmail;
+    }
+
+    public Boolean isTeaching() {
+        return isTeaching;
+    }
+
+    public void setTeaching(Boolean teaching) {
+        isTeaching = teaching;
+    }
+
+    public LocalDate staffJoinDate() {
+        return staffJoinDate;
+    }
+
+    public void setStaffJoinDate(LocalDate staffJoinDate) {
+        this.staffJoinDate = staffJoinDate;
+    }
+
+    public List<String> teachingYearsOrWorkingYears() {
+        return teachingYearsOrWorkingYears;
+    }
+
+    public void setTeachingYearsOrWorkingYears(List<String> teachingYearsOrWorkingYears) {
+        this.teachingYearsOrWorkingYears = teachingYearsOrWorkingYears;
+    }
+
+    public List<StaffAttendance> StaffAttendanceAndDetails() {
+        return StaffAttendanceAndDetails;
+    }
+
+    public void setStaffAttendanceAndDetails(List<StaffAttendance> staffAttendanceAndDetails) {
+        StaffAttendanceAndDetails = staffAttendanceAndDetails;
+    }
+
+    public List<Subjects> teachingsubjects() {
+        return teachingsubjects;
+    }
+
+    public void setTeachingsubjects(List<Subjects> teachingsubjects) {
+        this.teachingsubjects = teachingsubjects;
+    }
+
+    public List<String> teachingOrWorkingBranches() {
+        return teachingOrWorkingBranches;
+    }
+
+    public void setTeachingOrWorkingBranches(List<String> teachingOrWorkingBranches) {
+        this.teachingOrWorkingBranches = teachingOrWorkingBranches;
+    }
+
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "staffId='" + staffId + '\'' +
+                ", staffName='" + staffName + '\'' +
+                ", staffEmail='" + staffEmail + '\'' +
+                ", isTeaching=" + isTeaching +
+                ", staffJoinDate=" + staffJoinDate +
+                ", teachingYearsOrWorkingYears=" + teachingYearsOrWorkingYears +
+                ", StaffAttendanceAndDetails=" + StaffAttendanceAndDetails +
+                ", teachingsubjects=" + teachingsubjects +
+                ", teachingOrWorkingBranches=" + teachingOrWorkingBranches +
+                '}';
+    }
+}

@@ -1,0 +1,129 @@
+package com.StudentAndStaff.modal;
+
+import java.time.LocalDate;
+import java.util.Map;
+import java.util.Set;
+
+public class Student {
+	
+	String studentId;
+    String studentName;
+	String studentEmail;
+    String studentbranch;
+    LocalDate studentJoinDate;
+    String currentYear;
+    Map<String, Set<StudentAttendance>> studentYearlyAttendance;
+    Map<String,Set<StudentSubjectsAndMarksAndResult>> yearWiseStudentSubjectsAndMarksAndResult;
+    
+    public Student() {
+		super();
+	}
+    
+	public Student(String studentId, String studentName, String studentEmail, String studentbranch,
+			LocalDate studentJoinDate, String currentYear, Map<String, Set<StudentAttendance>> studentYearlyAttendance,
+			Map<String, Set<StudentSubjectsAndMarksAndResult>> yearWiseStudentSubjectsAndMarksAndResult) {
+		super();
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.studentEmail = studentEmail;
+		this.studentbranch = studentbranch;
+		this.studentJoinDate = studentJoinDate;
+		this.currentYear = currentYear;
+		this.studentYearlyAttendance = studentYearlyAttendance;
+		this.yearWiseStudentSubjectsAndMarksAndResult = yearWiseStudentSubjectsAndMarksAndResult;
+	}
+
+
+	public String getStudentId() {
+		return studentId;
+	}
+
+
+	public void setStudentId(String studentId) {
+		this.studentId = studentId;
+	}
+
+
+	public String getStudentName() {
+		return studentName;
+	}
+
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+
+	public String getStudentEmail() {
+		return studentEmail;
+	}
+
+
+	public void setStudentEmail(String studentEmail) {
+		this.studentEmail = studentEmail;
+	}
+
+
+	public String getStudentbranch() {
+		return studentbranch;
+	}
+
+
+	public void setStudentbranch(String studentbranch) {
+		this.studentbranch = studentbranch;
+	}
+
+
+	public LocalDate getStudentJoinDate() {
+		return studentJoinDate;
+	}
+
+
+	public void setStudentJoinDate(LocalDate studentJoinDate) {
+		this.studentJoinDate = studentJoinDate;
+	}
+
+
+	public String getCurrentYear() {
+		return currentYear;
+	}
+
+
+	public void setCurrentYear(String currentYear) {
+		this.currentYear = currentYear;
+	}
+
+
+	public Map<String, Set<StudentAttendance>> getStudentYearlyAttendance() {
+		return studentYearlyAttendance;
+	}
+
+
+	public void setStudentYearlyAttendance(Map<String, Set<StudentAttendance>> studentYearlyAttendance) {
+		this.studentYearlyAttendance = studentYearlyAttendance;
+	}
+
+
+	public Map<String, Set<StudentSubjectsAndMarksAndResult>> getYearWiseStudentSubjectsAndMarksAndResult() {
+		return yearWiseStudentSubjectsAndMarksAndResult;
+	}
+
+
+	public void setYearWiseStudentSubjectsAndMarksAndResult(
+			Map<String, Set<StudentSubjectsAndMarksAndResult>> yearWiseStudentSubjectsAndMarksAndResult) {
+		this.yearWiseStudentSubjectsAndMarksAndResult = yearWiseStudentSubjectsAndMarksAndResult;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentEmail=" + studentEmail
+				+ ", studentbranch=" + studentbranch + ", studentJoinDate=" + studentJoinDate + ", currentYear="
+				+ currentYear + ", studentYearlyAttendance=" + studentYearlyAttendance
+				+ ", yearWiseStudentSubjectsAndMarksAndResult=" + yearWiseStudentSubjectsAndMarksAndResult + "]";
+	}
+
+	
+	
+	
+}

@@ -1,0 +1,57 @@
+package com.StudentAndStaff.service;
+
+import java.time.LocalDate;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.StudentAndStaff.modal.Staff;
+import com.StudentAndStaff.modal.Student;
+
+public class StaffService {
+	
+
+	
+	List<Staff> staff1 = new LinkedList();
+
+    public List<Staff> saveAllStaff(List<Staff>  staff)
+    {
+    	staff1.addAll(staff);
+        return staff1;
+    }
+
+//  1) Retrieve staff details who teach year 1
+    public List<Staff> getStaffWhoTeachYear1()
+    {
+    	List<Staff> staff2 = staff1.stream().filter(s->s.getTeachingYearsOrWorkingYears()
+    										.contains("year 1") && s.getIsTeaching()==true)
+    										.collect(Collectors.toList());
+        return staff2;
+    }
+    
+//    2) Retrieve staff who is present today and who teaches Subject1
+    public List<Staff> getStaffWhoPresentTodayAndTeachSubject1()
+    {
+    	LocalDate today = LocalDate.now();
+    	List<Staff> Staff3 = staff1.stream().filter(s->s.getIsTeaching() != false)
+    					.filter(s->s.getTeachingsubjects().stream()
+    					.anyMatch(sub->sub.getSubjectName().equalsIgnoreCase("mechanics")) &&
+    					s.getStaffAttendanceAndDetails().stream()
+    					.anyMatch(a->a.getStaffAttendanceDate().isEqual(today)))
+    					.collect(Collectors.toList());
+    			
+        return Staff3;
+    }
+    
+    //3) Retrieve staff who teaches more than 2 subjects in year 2 (edited) 
+
+    public List<Staff> getStaffWhoTeachesMoreThanTwoSubjectsInYear2()
+    {
+    	
+    	List<Staff> Staff4 = staff1.stream().filter(s->s.getIsTeaching() == true &&
+    												s.getTeachingsubjects().stream().count()>2)
+    												.collect(Collectors.toList());
+        return Staff4;
+    }
+
+}

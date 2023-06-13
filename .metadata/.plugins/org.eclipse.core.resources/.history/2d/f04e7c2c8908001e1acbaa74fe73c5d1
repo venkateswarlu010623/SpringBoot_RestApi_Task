@@ -1,0 +1,15 @@
+package com.Employee.Modal;
+
+public class Location {
+
+	int locationId;
+	String locationName;
+	String locationCountry;
+	
+}
+
+//Location
+//--------
+//locationId
+//locationName (Hyderabad, chennai, London)
+//locationCountry (India, United Kingdom)

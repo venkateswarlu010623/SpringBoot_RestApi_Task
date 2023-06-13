@@ -1,0 +1,13 @@
+
+import java.util.List;
+
+public class Employee1 {
+	
+	int employeeId;
+	String employeeName;
+	int Salary;
+	Location locationId;
+	Department deptId;
+	List<Benefits>benefitId;
+	
+	}

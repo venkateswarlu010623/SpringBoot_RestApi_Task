@@ -1,0 +1,22 @@
+package com.StudentAndStaff.modal;
+
+import java.time.LocalDate;
+
+public class StudentAttendanceBuilder {
+    private LocalDate studentAttendanceDate;
+    private String studentAttendancestatus;
+
+    public StudentAttendanceBuilder setStudentAttendanceDate(LocalDate studentAttendanceDate) {
+        this.studentAttendanceDate = studentAttendanceDate;
+        return this;
+    }
+
+    public StudentAttendanceBuilder setStudentAttendancestatus(String studentAttendancestatus) {
+        this.studentAttendancestatus = studentAttendancestatus;
+        return this;
+    }
+
+    public StudentAttendance createStudentAttendance() {
+        return new StudentAttendance(studentAttendanceDate, studentAttendancestatus);
+    }
+}

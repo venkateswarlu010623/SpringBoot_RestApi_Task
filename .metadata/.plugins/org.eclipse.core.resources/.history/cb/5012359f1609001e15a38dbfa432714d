@@ -1,0 +1,49 @@
+package com.StudentAndStaff.modal;
+
+
+import lombok.Data;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+
+public class StaffAttendance {
+
+    LocalDate StaffAttendanceDate;
+    String staffAttendancestatus;
+    
+	
+
+	public StaffAttendance() {
+		super();
+	}
+	
+	public StaffAttendance(LocalDate staffAttendanceDate, String staffAttendancestatus) {
+		super();
+		StaffAttendanceDate = staffAttendanceDate;
+		this.staffAttendancestatus = staffAttendancestatus;
+	}
+
+	public LocalDate getStaffAttendanceDate() {
+		return StaffAttendanceDate;
+	}
+
+	public void setStaffAttendanceDate(LocalDate staffAttendanceDate) {
+		StaffAttendanceDate = staffAttendanceDate;
+	}
+
+	public String getStaffAttendancestatus() {
+		return staffAttendancestatus;
+	}
+
+	public void setStaffAttendancestatus(String staffAttendancestatus) {
+		this.staffAttendancestatus = staffAttendancestatus;
+	}
+
+	@Override
+	public String toString() {
+		return "StaffAttendance [StaffAttendanceDate=" + StaffAttendanceDate + ", staffAttendancestatus="
+				+ staffAttendancestatus + "]";
+	}
+    
+    
+}

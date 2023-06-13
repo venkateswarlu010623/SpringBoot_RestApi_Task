@@ -1,0 +1,48 @@
+package com.StudentAndStaff.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.StudentAndStaff.modal.Staff;
+import com.StudentAndStaff.modal.Student;
+import com.StudentAndStaff.service.StaffService;
+
+@RestController
+public class StaffController {
+	
+	@Autowired
+	StaffService staffService;
+
+    @PostMapping ("save/staff")
+    public List<Staff> saveAllStaff(@RequestBody List<Staff>  staff )
+    {
+        return staffService.saveAllStaff(staff);
+    }
+    
+    
+    @GetMapping ("student1")
+    public List<Student> getStudentList1()
+    {
+        return studentService.getStudentsOfYear1();
+    }
+    
+    
+    @GetMapping ("student2")
+    public List<Student> getStudentList2()
+    {
+        return studentService.getStudentsOfYear1WhoPresentTodayInCSEBranch();
+    }
+    
+    
+    @GetMapping ("student3")
+    public List<Student> getStudentList3()
+    {
+        return studentService.getStudentsWhoAreNotPassesdInYear1();
+    }
+
+}

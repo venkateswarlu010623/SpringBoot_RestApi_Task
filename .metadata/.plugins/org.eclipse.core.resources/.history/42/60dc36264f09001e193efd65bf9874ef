@@ -1,0 +1,21 @@
+package com.StudentAndStaff.modal;
+
+import java.time.LocalDate;
+import java.util.Map;
+import java.util.Set;
+
+public class Student {
+	
+	String studentId;
+    String studentName;
+	String studentEmail;
+    String studentBranch;
+    LocalDate studentJoinDate;
+    String currentYear;
+    Map<String, Set<StudentAttendance>> studentYearlyAttendance;
+    Map<String,Set<StudentSubjectsAndMarksAndResult>> yearWiseStudentSubjectsAndMarksAndResult;
+    
+    public Student() {
+		super();
+	}
+   }

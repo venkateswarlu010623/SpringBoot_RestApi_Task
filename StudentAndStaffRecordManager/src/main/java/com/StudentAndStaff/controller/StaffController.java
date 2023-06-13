@@ -1,0 +1,54 @@
+package com.StudentAndStaff.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.StudentAndStaff.modal.Staff;
+import com.StudentAndStaff.service.StaffService;
+
+@RestController
+public class StaffController {
+	
+	@Autowired
+	StaffService staffService;
+
+    @PostMapping ("/createstaffmembers")
+    public List<Staff> saveAllStaff(@RequestBody List<Staff>  staff )
+    {
+        return staffService.saveAllStaff(staff);
+    }
+    
+//    @PostMapping ("createStaffMembers22")
+//    public List<Staff> saveAllStaff(@RequestBody Staff  staff )
+//    {
+//        return staffService.saveStaff(staff);
+//    }
+    
+    
+    @GetMapping ("staff-teaching/{year}")
+    public List<Staff> getStaffByYearsTeaching(@PathVariable String year)
+    {
+        return staffService.getStaffWhoTeachYear1(year);
+    }
+    
+    
+    @GetMapping("staff/present-and-teaching/{subject}")
+    public List<Staff> getStaffList(@PathVariable String subject)
+    {
+        return staffService.getStaffWhoPresentTodayAndTeachSubject1(subject);
+    }
+    
+    
+    @GetMapping("staff/teaching-more-than-{number}-subjects-in-{year}")
+    public List<Staff> getStaffList3(@PathVariable int number,@PathVariable String year)
+    {
+        return staffService.getStaffWhoTeachesMoreThanTwoSubjectsInYear2(number,year);
+    }
+
+}
